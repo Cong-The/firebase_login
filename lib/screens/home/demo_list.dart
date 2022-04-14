@@ -14,7 +14,7 @@ class DemoList extends StatefulWidget {
 class _DemoListState extends State<DemoList> {
   @override
   Widget build(BuildContext context) {
-    final demos = Provider.of<List<Demo>>(context);
+    final demos = Provider.of<List<Demo>>(context); // ?? [];
 
     return ListView.builder(
       itemCount: demos.length,

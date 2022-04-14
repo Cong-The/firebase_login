@@ -15,6 +15,7 @@ class DemoTile extends StatelessWidget {
             leading: CircleAvatar(
               radius: 25,
               backgroundColor: Colors.brown[demo.strength],
+              backgroundImage: const AssetImage('assets/icon.png'),
             ),
             title: Text(demo.name),
             subtitle: Text('take ${demo.sugars} sugar(s)'),

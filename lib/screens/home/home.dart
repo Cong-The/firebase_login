@@ -39,7 +39,11 @@ class Home extends StatelessWidget {
                 }),
           ],
         ),
-        body: const DemoList(),
+        body: Container(
+            decoration: const BoxDecoration(
+                image:
+                    DecorationImage(image: AssetImage('assets/coffee_bg.png'))),
+            child: const DemoList()),
       ),
     );
   }

@@ -95,9 +95,13 @@ class _SettingFormState extends State<SettingForm> {
                       'Update',
                     ),
                     onPressed: () async {
-                      print(_currentName);
-                      print(_currenStrength);
-                      print(_currentSugars);
+                      if (_formKey.currentState!.validate()) {
+                        await DatabaseService(uid: user.uid).updateUserData(
+                            _currentSugars ?? userData.sugars,
+                            _currentName ?? userData.name,
+                            _currenStrength ?? userData.strength);
+                        Navigator.pop(context);
+                      }
                     },
                   )
                 ],
